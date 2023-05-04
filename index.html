@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Coaches Corner</title>
+</head>
+
+<script type="module">
+  import { upload } from './js/upload.js';
+  import { edit } from './js/edit.js';
+  document.querySelector('#btnUpload').addEventListener('click', upload);
+  document.querySelector('#btnEdit').addEventListener('click', edit);
+</script>
+
+<body>
+  <input type="file" id="video">
+  title: <input type="text" id="title">
+  description: <input type="text" id="description">
+  <button type="button" id="btnUpload">Upload Video</button>
+  <button type="button" id="btnEdit">Edit Videos</button>
+  <div id="videos"></div>
+</body>
+</html>
