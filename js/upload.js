@@ -9,11 +9,11 @@ const app = firebase.app;
 
 export const upload = async () => {
   const storage = getStorage(app);
-  const videoFile = document.querySelector("#video").files[0];
+  const videoFile = document.querySelector("#upload-video").files[0];
   const videoName = new Date() + '-' + videoFile.name;
   const videoRef = ref(storage, videoName);
-  const title = document.getElementById('title').value;
-  const description = document.getElementById('description').value;
+  const title = document.getElementById('upload-title').value;
+  const description = document.getElementById('upload-desc').value;
   const course = {
     title: title,
     description: description,
